@@ -6,13 +6,13 @@ LunchCheckController.$inject = ['$scope'];
 
 function LunchCheckController ($scope, $filter){
 $scope.text = "";
-$scope.message = "Please Enter Data Then Click on Button 'Check If Too Much' ";
+$scope.message = "Please Enter Data First";
 
 $scope.CheckIt = function (){
   if($scope.text.length > 0){
       $scope.message = CheckIfTooMuch($scope.text);
   }else{
-      $scope.message= "Please Enter Data Then Click on Button 'Check If Too Much'";
+      $scope.message= "Please Enter Data First";
   }
 };
 
